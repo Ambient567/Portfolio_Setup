@@ -9,8 +9,8 @@ body {
   margin-left: 5%;
 }
 
-.main{
-  display:flex;
+.main {
+  display: flex;
   flex-direction: column;
 }
 
