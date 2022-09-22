@@ -28,7 +28,6 @@ body {
   width: 100%;
   display: inline;
   justify-content: space-between;
-  flex-basis: 100%;
 }
 
 .nav-bar li a {
