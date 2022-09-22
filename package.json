@@ -1,0 +1,28 @@
+{
+  "name": "Portfolio_Setup",
+  "version": "1.0.0",
+  "description": ">For this project I create my first portfolio website, using the foolwing set up: Set up a new repository and prepare it for development using best practices (e.g. linters). Build the first 2 sections of the mobile website using the template you chose in the previous step. ## Built With - CSS - HTML ## Live Demo (if available) [Live Demo Link](https://livedemo.com) ## Getting Started To get a local copy up and running follow these simple example steps. ### Prerequisites - git - Broswer to Display - IDE to run and edit the code ### Setup - open a terminal - run git clone https://github.com/Ambient567/Portfolio-setup-and-mobile-first.git - run cd Portfolio-setup-and-mobile-first - open index.html ### Usage - It can be used as a book collection record.",
+  "main": "index.js",
+  "dependencies": {
+    "hint": "^7.1.2",
+    "stylelint": "^13.13.1",
+    "stylelint-config-standard": "^21.0.0",
+    "stylelint-scss": "^3.21.0",
+    "stylelint-csstree-validator": "^1.9.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ambient567/Portfolio_Setup.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Ambient567/Portfolio_Setup/issues"
+  },
+  "homepage": "https://github.com/Ambient567/Portfolio_Setup#readme"
+}
