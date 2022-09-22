@@ -1,0 +1,101 @@
+body {
+  overflow-x: hidden;
+  color: #172B4D;
+  font-family: 'Poppins', sans-serif;
+}
+
+.header {
+  width: 90%;
+  margin-left: 5%;
+}
+
+.nav-bar ul {
+  display: flex;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  text-decoration: none;
+  justify-content: space-between;
+}
+
+.nav-bar li {
+  width: 100%;
+  display: inline;
+  justify-content: space-between;
+  flex-basis: 100%;
+}
+
+.nav-bar li a {
+  color: #6070FF;
+  text-decoration: none;
+  justify-content: space-between;
+  flex: 1;
+}
+
+.dropDown {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  color: #6070FF;
+  text-decoration: none;
+}
+
+.menuShow {
+  color: #6070FF;
+  text-decoration: none;
+  font-size: 28x;
+  font-weight: 700;
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+  background-image: url("images/header-shapes\ mobile@2x.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.details {
+  order: 1;
+  width: 90%;
+  margin-left: 5%;
+  margin-top: 20%;
+}
+
+.icons {
+  order: 2;
+  width: 90%;
+  margin-left: 5%;
+  margin-top: -5%;
+  display: flex;
+}
+
+.icons ul {
+  display: flex;
+  padding: 0;
+  flex-wrap: wrap;
+  list-style-type: none;
+}
+
+.icons li {
+  flex: 1 1 10%;
+  text-decoration: none;
+}
+
+.icons a {
+  flex: 1;
+  padding: 1px 5px;
+  color: #505F79;
+  font-size: 30px;
+}
+
+.title {
+  font-weight: 700;
+  font-size: 35px;
+  line-height: 52px;
+}
+
+.con {
+  color: #7F8CFF;
+}
