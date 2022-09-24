@@ -167,6 +167,20 @@ body {
   color: #6070ff;
   align-items: center;
 }
+.tags .canopy {
+  background: #fff;
+  color: #344563;
+  font-weight: 700;
+}
+
+.tags .grey{
+  color: #7A869A;
+  font-size: 15px;
+}
+
+.fa-circle {
+ font-size: 10px;
+}
 
 .css-tag,
 .html-tag,
