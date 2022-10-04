@@ -13,7 +13,7 @@ body {
 }
 
 .main {
-  background-color: #dfe1e6;
+  background-color: #fff;
   display: flex;
   flex-direction: column;
 }
@@ -162,7 +162,6 @@ body {
 }
 
 .tags ul {
-  /* display: flex; */
   gap: 12px;
   list-style-type: none;
   margin-left: -8%;
@@ -250,7 +249,7 @@ body {
 .skills {
   width: 100%;
   background-color: #fff;
-  margin-top: -11%;
+  margin-top: 0;
 }
 
 .skills li {
@@ -311,7 +310,7 @@ body {
 
 .contact {
   padding: 0;
-  margin: 0;
+  margin: 80px 0 0 0;
   background: url(/images/Contact-me-background.svg) no-repeat;
   background-size: 100% auto;
   width: 100%;
@@ -325,7 +324,7 @@ body {
 
 .contact-title {
   padding: 0;
-  margin: 0px 0 0 0;
+  margin: 46px 0 0 0;
   width: 801px;
   height: 56px;
   font-style: normal;
@@ -342,7 +341,7 @@ body {
   font-style: normal;
   font-weight: 400;
   font-size: 20px;
-  color: white;
+  color: #ebebff;
   text-align: center;
   margin-bottom: 60px;
 }
@@ -376,9 +375,10 @@ footer form {
   background: #ffffff;
   border: 1px solid #cfd8dc;
   border-radius: 8px;
-  width: 310px;
+  width: 300px;
   height: 170px;
   margin: 14px 0;
+  padding: 12px 0 0 12px;
 }
 
 .form::placeholder {
@@ -390,9 +390,38 @@ footer form {
 }
 
 .area::placeholder {
+  font-family: "Poppins", sans-serif;
   font-style: normal;
   font-weight: 400;
-  font-size: 17px;
+  font-size: 15px;
   color: #b3bac5;
-  padding: 12px 0 0 12px;
+  /* padding: 12px 0 0 12px; */
+  padding: 0 0 0 12px;
+}
+
+.contact-btn {
+  width: 140px;
+  height: 48px;
+  background: #ffffff;
+  border-radius: 8px;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 17px;
+  align-items: center;
+  color: #6070ff;
+  margin: 8px 175px 0 0;
+  outline: none;
+  border: none;
+}
+
+.contact-btn:hover {
+  background: #6070ff;
+  border-radius: 8px;
+  color: #fff;
+}
+
+.contact-btn:active {
+  background: #2230d2;
+  border-radius: 8px;
+  color: #fff;
 }
