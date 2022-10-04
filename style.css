@@ -322,3 +322,15 @@ body {
   justify-content: center;
   align-items: center;
 }
+
+.contact-title {
+  padding: 0;
+  margin: 0px 0 0 0;
+  width: 801px;
+  height: 56px;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 40px;
+  text-align: center;
+  color: white;
+}
