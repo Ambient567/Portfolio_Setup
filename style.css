@@ -353,3 +353,46 @@ footer form {
   align-items: center;
   margin: 20px 0;
 }
+
+.form {
+  width: 300px;
+  height: 40px;
+  background: #fff;
+  border: 1px solid #cfd8dc;
+  border-radius: 8px;
+  padding: 0 0 0 12px;
+  margin: 14px 0 0 0;
+  color: #172b4d;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 17px;
+}
+
+.area {
+  color: #172b4d;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 17px;
+  background: #ffffff;
+  border: 1px solid #cfd8dc;
+  border-radius: 8px;
+  width: 310px;
+  height: 170px;
+  margin: 14px 0;
+}
+
+.form::placeholder {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  color: #b3bac5;
+  padding: 0 0 0 12px;
+}
+
+.area::placeholder {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 17px;
+  color: #b3bac5;
+  padding: 12px 0 0 12px;
+}
