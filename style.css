@@ -334,3 +334,15 @@ body {
   text-align: center;
   color: white;
 }
+
+.contact-desc {
+  padding: 0 10px;
+  width: 327px;
+  height: 102px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  color: white;
+  text-align: center;
+  margin-bottom: 60px;
+}
