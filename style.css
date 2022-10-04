@@ -1,7 +1,15 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;700&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;500&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;700&display=swap");
+
 body {
   overflow-x: hidden;
   color: #172b4d;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 
 .main {
@@ -154,7 +162,7 @@ body {
 }
 
 .tags ul {
-  display: flex;
+  /* display: flex; */
   gap: 12px;
   list-style-type: none;
   margin-left: -8%;
@@ -162,6 +170,8 @@ body {
 }
 
 .tags li {
+  float: left;
+  padding: 10px;
   background: #ebebff;
   border-radius: 8px;
   font-size: 15px;
@@ -297,4 +307,18 @@ body {
 
 .bottom {
   margin-left: 71%;
+}
+
+.contact {
+  padding: 0;
+  margin: 0;
+  background: url(/images/Contact-me-background.svg) no-repeat;
+  background-size: 100% auto;
+  width: 100%;
+  height: 779px;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
