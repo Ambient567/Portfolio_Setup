@@ -565,6 +565,7 @@ footer form {
   .about-btn {
     margin-left: 3%;
     margin-top: 0;
+    width: 162px;
   }
 
   .skills {
@@ -577,6 +578,9 @@ footer form {
     width: 750px;
   }
 
+  .bout{
+      width: 447px;
+  }
   .child {
     display: inline-block;
   }
