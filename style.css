@@ -500,6 +500,11 @@ footer form {
   .second .title-post {
     flex: 1 1 20%;
     margin: 0;
+    transition: all 0.7s ease-in;
+  }
+
+  .title-post:hover {
+    transform: scale(1.05);
   }
 
   .text-post {
