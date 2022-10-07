@@ -1,7 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;500&display=swap");
-
 body {
   overflow-x: hidden;
   color: #172b4d;
@@ -463,42 +462,32 @@ footer form {
   }
 
   .item {
-    flex-wrap: wrap;
+    flex-direction: row;
     height: 416px;
     align-items: flex-start;
+    justify-content: space-evenly;
   }
 
-  .second {
-    flex-direction: row-reverse;
-  }
-
-  /* .place1{
-    order: 4;
-  }
-
-  .place2{
-    order: 1;
-  }
-
-  .place3{
-    order: 2;
-  }
-
-  .place4{
-    order: 3;
-  } */
-
-  .img,
-  .second .img {
-    flex: 1 1 50%;
-    height: 80%;
+  .left-block {
+    order: 0;
     width: 50%;
-    margin: 10px;
+    height: 100%;
+    margin-top: 1%;
   }
 
-  .title-post,
-  .second .title-post {
-    flex: 1 1 20%;
+  .right-block {
+    order: 1;
+    width: 50%;
+  }
+
+  .img {
+    order: 2;
+    height: 90%;
+    width: 500px;
+    margin-top: 1%;
+  }
+
+  .title-post {
     margin: 0;
     transition: all 0.7s ease-in;
   }
@@ -527,17 +516,14 @@ footer form {
   }
 
   .right-block {
-    flex: 1 1 20%;
-    margin: 0;
-    width: 544px;
-    margin-top: -20%;
+    order: 1;
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
   }
 
   .tags {
-    flex: 1 1 20%;
-    margin: 0;
-    margin-top: -20%;
-    margin-left: -2%;
+    margin-top: -5%;
   }
 
   .other ul {
@@ -551,10 +537,11 @@ footer form {
   }
 
   .btn {
-    margin-left: -40%;
-    margin-top: 15%;
+    margin-left: 0;
+    margin-top: 5%;
     border: 1px solid #6070ff;
     border-radius: 8px;
+    width: 124px;
   }
 
   .myself {
@@ -587,7 +574,7 @@ footer form {
   }
 
   .text {
-    width: 447px;
+    width: 750px;
   }
 
   .child {
@@ -651,7 +638,7 @@ footer form {
   .mobile {
     display: none;
   }
-
+  
   .desktop {
     visibility: visible;
   }
