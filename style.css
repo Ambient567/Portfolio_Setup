@@ -478,6 +478,9 @@ footer form {
   .right-block {
     order: 1;
     width: 50%;
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
   }
 
   .img {
@@ -513,13 +516,6 @@ footer form {
 
   .text-post {
     margin: 0;
-  }
-
-  .right-block {
-    order: 1;
-    display: flex;
-    flex-direction: column;
-    margin: 10px;
   }
 
   .tags {
@@ -578,9 +574,10 @@ footer form {
     width: 750px;
   }
 
-  .bout{
-      width: 447px;
+  .bout {
+    width: 447px;
   }
+
   .child {
     display: inline-block;
   }
@@ -642,7 +639,7 @@ footer form {
   .mobile {
     display: none;
   }
-  
+
   .desktop {
     visibility: visible;
   }
