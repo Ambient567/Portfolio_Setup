@@ -2,10 +2,13 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;500&display=swap");
 
-body {
+body,
+html {
   overflow-x: hidden;
   color: #172b4d;
   font-family: "Poppins", sans-serif;
+  width: 100%;
+  margin-left: 0;
 }
 
 .main {
@@ -121,11 +124,31 @@ body {
   align-items: flex-start;
 }
 
-.img {
-  margin: 5%;
-  width: 310px;
+.one {
+  order: 1;
 }
 
+.two {
+  order: 2;
+}
+
+.three {
+  order: 3;
+}
+
+.four {
+  order: 4;
+}
+
+.img {
+  margin: 5%;
+  width: 295px;
+}
+
+.right-block {
+  display: flex;
+  flex-direction: column;
+}
 .title-post {
   font-weight: 700;
   font-size: 25px;
@@ -134,7 +157,7 @@ body {
 }
 
 .text-post {
-  margin-left: 5%;
+  margin-left: 3%;
   font-size: 18px;
 }
 
@@ -171,6 +194,9 @@ body {
 .fa-circle {
   font-size: 10px;
 }
+.other {
+  margin-left: 2%;
+}
 
 .css-tag,
 .html-tag,
@@ -198,6 +224,7 @@ body {
 .btn {
   background: #fff;
   height: 50px;
+  width: 124px;
   font-weight: 700;
   font-size: 17px;
   line-height: 24px;
@@ -241,7 +268,7 @@ body {
 .frame-title,
 .skill-title {
   background: none;
-  font-size: 25px;
+  font-size: 20px;
   height: 50px;
   font-weight: 500;
   line-height: 24px;
@@ -363,6 +390,7 @@ footer form {
 }
 
 .form::placeholder {
+  font-family: "Poppins", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 15px;
@@ -404,10 +432,6 @@ footer form {
   background: #2230d2;
   border-radius: 8px;
   color: #fff;
-}
-
-.desktop {
-  visibility: hidden;
 }
 
 @media (min-width: 768px) {
@@ -458,8 +482,13 @@ footer form {
   }
 
   .icons {
-    margin-left: 33%;
-    margin-top: -3%;
+    margin-left: 34%;
+    margin-top: -4%;
+  }
+
+  .works {
+    width: 100%;
+    margin: 0;
   }
 
   .item {
@@ -497,6 +526,10 @@ footer form {
   }
 
   .title {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 52px;
     animation-duration: 3s;
     animation-name: slidein;
   }
@@ -546,6 +579,7 @@ footer form {
     flex-direction: row;
     align-items: center;
     width: 100%;
+    margin-top: 0;
   }
 
   .about {
@@ -566,9 +600,11 @@ footer form {
   }
 
   .skills {
-    width: 100%;
+    width: 120%;
     margin: 0;
+    margin-left: 5px;
     margin-top: 5%;
+    color: #172b4d;
   }
 
   .text {
@@ -576,6 +612,10 @@ footer form {
   }
 
   .bout {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
     width: 447px;
   }
 
@@ -602,7 +642,14 @@ footer form {
   .language-title,
   .frame-title,
   .skill-title {
-    width: 80%;
+    width: 555px;
+    color: #172b4d;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .fa-angle-right {
+    margin-left: 50%;
   }
 
   .contact {
@@ -631,6 +678,14 @@ footer form {
   .area {
     width: 440px;
     border-radius: 2px;
+  }
+
+  .area::placeholder {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    color: #b3bac5;
+    padding: 0 0 0 12px;
   }
 
   .contact-btn {
