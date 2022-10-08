@@ -612,7 +612,7 @@ footer form {
     margin: 0;
     margin-top: 5%;
     margin-left: 10%;
-    border-top-right-radius: 0;
+    border-top-right-radius: 30px;
   }
 
   .about .icons {
