@@ -2,10 +2,15 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;500&display=swap");
 
-body {
+body,
+html {
   overflow-x: hidden;
   color: #172b4d;
   font-family: "Poppins", sans-serif;
+  width: 100%;
+  margin-left: 0;
+  margin-top: 0;
+  background-color: #e5e5e5;
 }
 
 .main {
@@ -15,6 +20,11 @@ body {
 }
 
 .header {
+  width: 100%;
+  background-color: #fff;
+}
+
+.nav-bar {
   width: 90%;
   margin-left: 5%;
 }
@@ -121,9 +131,30 @@ body {
   align-items: flex-start;
 }
 
+.one {
+  order: 1;
+}
+
+.two {
+  order: 2;
+}
+
+.three {
+  order: 3;
+}
+
+.four {
+  order: 4;
+}
+
 .img {
   margin: 5%;
-  width: 310px;
+  width: 295px;
+}
+
+.right-block {
+  display: flex;
+  flex-direction: column;
 }
 
 .title-post {
@@ -134,7 +165,7 @@ body {
 }
 
 .text-post {
-  margin-left: 5%;
+  margin-left: 3%;
   font-size: 18px;
 }
 
@@ -172,6 +203,10 @@ body {
   font-size: 10px;
 }
 
+.other {
+  margin-left: 2%;
+}
+
 .css-tag,
 .html-tag,
 .boot-tag {
@@ -198,6 +233,7 @@ body {
 .btn {
   background: #fff;
   height: 50px;
+  width: 124px;
   font-weight: 700;
   font-size: 17px;
   line-height: 24px;
@@ -213,6 +249,12 @@ body {
   background: #6070ff;
   border-radius: 8px;
   color: #fff;
+}
+
+.myself {
+  height: 1200px;
+  background: #fff;
+  border-top-right-radius: 80px;
 }
 
 .about {
@@ -241,7 +283,7 @@ body {
 .frame-title,
 .skill-title {
   background: none;
-  font-size: 25px;
+  font-size: 20px;
   height: 50px;
   font-weight: 500;
   line-height: 24px;
@@ -291,7 +333,7 @@ body {
 
 .contact {
   padding: 0;
-  margin: 80px 0 0 0;
+  margin: -80px 0 0 0;
   background: url("images/Contact-me-background.svg") no-repeat;
   background-size: 100% auto;
   width: 100%;
@@ -301,6 +343,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  border-top-left-radius: 80px;
 }
 
 .contact-title {
@@ -363,6 +406,7 @@ footer form {
 }
 
 .form::placeholder {
+  font-family: "Poppins", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 15px;
@@ -406,10 +450,6 @@ footer form {
   color: #fff;
 }
 
-.desktop {
-  visibility: hidden;
-}
-
 @media (min-width: 768px) {
   .nav-bar ul {
     display: flex;
@@ -450,6 +490,8 @@ footer form {
     height: 890px;
     justify-content: center;
     align-items: center;
+    border-bottom-left-radius: 80px;
+    margin-bottom: -5%;
   }
 
   .details {
@@ -458,52 +500,54 @@ footer form {
   }
 
   .icons {
-    margin-left: 33%;
-    margin-top: -3%;
+    margin-left: 34%;
+    margin-top: -4%;
+  }
+
+  .works {
+    width: 100%;
+    margin: 0;
   }
 
   .item {
-    flex-wrap: wrap;
+    flex-direction: row;
     height: 416px;
     align-items: flex-start;
+    justify-content: space-evenly;
   }
 
-  .second {
-    flex-direction: row-reverse;
-  }
-
-  /* .place1{
-    order: 4;
-  }
-
-  .place2{
-    order: 1;
-  }
-
-  .place3{
-    order: 2;
-  }
-
-  .place4{
-    order: 3;
-  } */
-
-  .img,
-  .second .img {
-    flex: 1 1 50%;
-    height: 80%;
+  .left-block {
+    order: 0;
     width: 50%;
-    margin: 10px;
+    height: 100%;
+    margin-top: 1%;
   }
 
-  .title-post,
-  .second .title-post {
-    flex: 1 1 20%;
+  .right-block {
+    order: 1;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    margin: 0 10px 0 60px;
+  }
+
+  .img {
+    order: 2;
+    height: 90%;
+    width: 500px;
+    margin-top: 1%;
+  }
+
+  .title-post {
     margin: 0;
     transition: all 0.7s ease-in;
   }
 
   .title {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 52px;
     animation-duration: 3s;
     animation-name: slidein;
   }
@@ -523,25 +567,19 @@ footer form {
   }
 
   .text-post {
-    margin: 0;
-  }
-
-  .right-block {
-    flex: 1 1 20%;
-    margin: 0;
-    width: 544px;
-    margin-top: -20%;
+    margin-top: -5px;
+    margin-right: 20px;
+    margin-left: -2px;
   }
 
   .tags {
-    flex: 1 1 20%;
-    margin: 0;
-    margin-top: -20%;
-    margin-left: -2%;
+    margin-top: -8%;
+    margin-left: -5px;
   }
 
   .other ul {
-    margin-top: 15px;
+    margin-top: 5px;
+    margin-left: -10%;
   }
 
   .css-tag,
@@ -551,10 +589,11 @@ footer form {
   }
 
   .btn {
-    margin-left: -40%;
-    margin-top: 15%;
+    margin-left: 0;
+    margin-top: 5%;
     border: 1px solid #6070ff;
     border-radius: 8px;
+    width: 124px;
   }
 
   .myself {
@@ -562,13 +601,18 @@ footer form {
     flex-direction: row;
     align-items: center;
     width: 100%;
+    height: 800px;
+    margin-top: 0;
+    background-color: #fff;
   }
 
   .about {
-    width: 80%;
+    background-color: #fff;
+    width: 100%;
     margin: 0;
-    margin-top: 20%;
+    margin-top: 5%;
     margin-left: 10%;
+    border-top-right-radius: 30px;
   }
 
   .about .icons {
@@ -578,15 +622,25 @@ footer form {
   .about-btn {
     margin-left: 3%;
     margin-top: 0;
+    width: 162px;
   }
 
   .skills {
-    width: 100%;
+    width: 120%;
     margin: 0;
-    margin-top: 5%;
+    margin-left: 5px;
+    color: #172b4d;
   }
 
   .text {
+    width: 750px;
+  }
+
+  .bout {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
     width: 447px;
   }
 
@@ -613,7 +667,14 @@ footer form {
   .language-title,
   .frame-title,
   .skill-title {
-    width: 80%;
+    width: 555px;
+    color: #172b4d;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .fa-angle-right {
+    margin-left: 50%;
   }
 
   .contact {
@@ -622,7 +683,6 @@ footer form {
     background-size: contain;
     height: 846px;
     background-color: #6070ff;
-    border-top-left-radius: 100px;
   }
 
   .contact-desc {
@@ -642,6 +702,14 @@ footer form {
   .area {
     width: 440px;
     border-radius: 2px;
+  }
+
+  .area::placeholder {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    color: #b3bac5;
+    padding: 0 0 0 12px;
   }
 
   .contact-btn {
