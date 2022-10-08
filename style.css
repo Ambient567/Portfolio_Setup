@@ -149,6 +149,7 @@ html {
   display: flex;
   flex-direction: column;
 }
+
 .title-post {
   font-weight: 700;
   font-size: 25px;
@@ -194,6 +195,7 @@ html {
 .fa-circle {
   font-size: 10px;
 }
+
 .other {
   margin-left: 2%;
 }
