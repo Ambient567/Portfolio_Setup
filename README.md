@@ -19,6 +19,9 @@ To get a local copy up and running follow these simple example steps.
 ### Usage
 - It can be used as a book collection record.
 
+## Deployment
+- https://ambient567.github.io/
+
 ## Authors
 👤 **PreciousNhlapho**
 - GitHub: [@githubhandle](https://github.com/Ambient567/Portfolio-setup-and-mobile-first.git)
