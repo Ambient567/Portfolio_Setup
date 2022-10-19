@@ -30,7 +30,7 @@ html {
 }
 
 .nav-bar {
-  margin-top: -40%;
+  margin-top: -60%;
 }
 
 .nav-menu #myLinks {
@@ -95,12 +95,17 @@ html {
   font-weight: 700;
 }
 
+.nav-menu{
+  background-color: #fff;
+}
+
 .section {
   border: 1px solid #fff;
   border-bottom-left-radius: 80px;
   background-image: url("images/header-shapes\ mobile@2x.svg");
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: contain;
+  height: 817px;
 }
 
 .section,
@@ -109,6 +114,7 @@ html {
   flex-direction: column;
   background-color: #fff;
   width: 100%;
+  margin-top: 25%;
 }
 
 .details {
@@ -292,7 +298,7 @@ html {
 }
 
 .myself {
-  height: 1200px;
+  height: 1400px;
   background: #fff;
   border-top-right-radius: 80px;
 }
@@ -535,6 +541,7 @@ footer form {
     align-items: center;
     border-bottom-left-radius: 80px;
     margin-bottom: -5%;
+    margin-top: 0;
   }
 
   .details {
