@@ -30,7 +30,7 @@ html {
 }
 
 .nav-bar {
-  margin-top: -25%;
+  margin-top: -40%;
 }
 
 .nav-menu #myLinks {
@@ -74,11 +74,12 @@ html {
 }
 
 .dropDown {
-  width: 100%;
+  width: 90%;
   display: flex;
   justify-content: space-between;
   color: #6070ff;
   text-decoration: none;
+  padding-left: 5%;
 }
 
 .active {
@@ -521,6 +522,7 @@ footer form {
   .dropDown {
     display: none;
   }
+
 
   .section {
     display: flex;
