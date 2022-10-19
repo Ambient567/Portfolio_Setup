@@ -18,21 +18,34 @@
 <body>
 
     <header class="header">
-        <nav class="nav-bar">
+        <nav class="nav-menu">
             <div class="dropDown">
                 <a href="#" class="menuShow">My Logo</a>
-                <a href="#" class="menuShow">☰</a>
+                <a href="javascript:void(0);" class="icon" onclick="myFunction()" id="bars">☰</a>
             </div>
-            <ul>
-                <li class="name"><a href="#">My Logo</a></li>
-                <li><a href="#">Portfolio</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Contact</a></li>
+            <ul id="myLinks">
+                <a onclick="myFunction()" href=""><i class="fa-solid fa-xmark"></i></a>
+                <li><a onclick="myFunction()" href="#works">Portfolio</a></li>
+                <li><a onclick="myFunction()" href="#myself">About</a></li>
+                <li><a onclick="myFunction()" href="#contact">Contact</a></li>
+
             </ul>
         </nav>
     </header>
 
-    <section class="section">
+    <header class="header">
+        <nav class="nav-bar">
+            <ul>
+                <li class="name"><a href="#">My Logo</a></li>
+                <li><a href="#works">Portfolio</a></li>
+                <li><a href="#myself">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+
+            </ul>
+        </nav>
+    </header>
+
+    <section class="section" id="section">
         <div class="icons">
             <ul>
                 <li><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
@@ -59,7 +72,7 @@
         <br><br><br>
     </section>
     <br><br><br>
-    <section class="works">
+    <section class="works" id="works">
         <div class="grid-container">
             <div>
 
@@ -201,7 +214,7 @@
     <br><br><br>
 
 
-    <section class="myself">
+    <section class="myself" id="myself">
         <div class="about">
             <div class="icons">
                 <ul>
@@ -255,7 +268,7 @@
         </div>
     </section>
 
-    <footer class="contact">
+    <footer class="contact" id="contact">
         <h2 class="contact-title">Contact me</h2>
         <p class="contact-desc">If you have an application you are interested in developing, a feature that you need
             built or a project that needs coding. I’d love to help with it </p>
@@ -270,6 +283,7 @@
             <button type="submit" class="contact-btn">Get in touch</button>
         </form>
     </footer>
+    <script src="script.js"></script>
 </body>
 
 </html>
