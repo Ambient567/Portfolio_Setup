@@ -50,6 +50,13 @@ html {
   backdrop-filter: blur(10px);
 }
 
+.icons li a {
+  flex: 1;
+  padding: 1px 5px;
+  color: #505f79;
+  font-size: 22px;
+}
+
 #myLinks a {
   color: white;
   padding: 14px 16px;
@@ -127,13 +134,6 @@ html {
 .icons li {
   flex: 1 1 10%;
   text-decoration: none;
-}
-
-.icons li a {
-  flex: 1;
-  padding: 1px 5px;
-  color: #505f79;
-  font-size: 22px;
 }
 
 .title {
