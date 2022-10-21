@@ -118,10 +118,24 @@ const messageEl = document.querySelector('#message');
 const errorEmail = document.querySelector('small');
 const form = document.querySelector('#form');
 
-const isRequired = (value) => { if(value === '' ) {return false } else { return  true} ;}
-const isBetween = (length, min, max) => {if (length < min || length > max) {return false } else { return  true};}
+const isRequired = (value) => { 
+  if (value === '') { 
+    return false } 
+  else {
+     return true; 
+  }
+}
+
+const isBetween = (length, min, max) => { 
+  if (length < min || length > max) {
+     return false 
+    } else { 
+      return true; 
+    } 
+  }
+
 const isEmailValid = (email) => {
-  const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+  const re = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
   return re.test(email);
 };
 
@@ -138,7 +152,7 @@ const checkEmail = () => {
     showError(emailEl, 'Email cannot be blank.');
   } else if (!isEmailValid(emailEl.value)) {
     showError(emailEl, 'Invalid Email Address');
-  } else if (!isBetween(emailEl.length,3,50)) {
+  } else if (!isBetween(emailEl.length, 3, 50)) {
     showError(emailEl, 'Email cannot be blank.');
   }
 
@@ -153,32 +167,32 @@ const checkUsername = () => {
     showError(usernameEl, 'Full name cannot be blank.');
   }
 
-    return true;
-  
+  return true;
+
 }
 
 const checkMessage = () => {
   if (!isRequired(messageEl)) {
     showError(messageEl, 'Text area cannot be blank.');
-  } else if (!isBetween(messageEl.length,3,400)) {
+  } else if (!isBetween(messageEl.length, 3, 400)) {
     showError(messageEl, 'Text area cannot be blank.');
   }
 
-    return true;
-  
+  return true;
+
 }
 
 form.addEventListener('submit', function (e) {
   e.preventDefault();
   const isUsernameValid = checkUsername(),
-  isEmailValid = checkEmail(),
-  isMessageValid = checkMessage();
+    isEmailValid = checkEmail(),
+    isMessageValid = checkMessage();
 
-  const isFormValid = isUsernameValid 
-  && isEmailValid 
-  && isMessageValid;
+  const isFormValid = isUsernameValid
+    && isEmailValid
+    && isMessageValid;
 
-// submit to the server if the form is valid
+  // submit to the server if the form is valid
   if (isFormValid) {
     errorEmail.textContent = '';
     form.submit();
