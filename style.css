@@ -19,26 +19,73 @@ html {
   flex-direction: column;
 }
 
+.fa-solid {
+  margin-left: 50%;
+  color: #acb7c3;
+}
+
 .header {
   width: 100%;
   background-color: #fff;
 }
 
 .nav-bar {
-  width: 90%;
-  margin-left: 5%;
+  margin-top: -60%;
 }
 
-.nav-bar ul {
+.nav-menu #myLinks {
   display: none;
 }
 
-.dropDown {
+.nav-menu ul {
+  position: fixed;
+  height: 100vh;
+  background: #6070ff;
+  text-decoration: none;
+  mix-blend-mode: multiply;
   width: 100%;
+  margin: 0;
+  padding: 0;
+  color: white;
+  backdrop-filter: blur(10px);
+}
+
+.icons li a {
+  flex: 1;
+  padding: 1px 5px;
+  color: #505f79;
+  font-size: 22px;
+}
+
+#myLinks a {
+  color: white;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 50px;
+  line-height: 50px;
+  display: block;
+  margin-left: 0;
+}
+
+.fa-xmark {
+  color: #fff;
+  margin-left: 90%;
+}
+
+.dropDown {
+  width: 90%;
   display: flex;
   justify-content: space-between;
   color: #6070ff;
   text-decoration: none;
+  padding-left: 5%;
+  padding-top: 5px;
+}
+
+.active {
+  background-color: #04aa6d;
+  color: white;
 }
 
 .menuShow {
@@ -48,12 +95,17 @@ html {
   font-weight: 700;
 }
 
+.nav-menu {
+  background-color: #fff;
+}
+
 .section {
   border: 1px solid #fff;
   border-bottom-left-radius: 80px;
   background-image: url("images/header-shapes\ mobile@2x.svg");
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: contain;
+  height: 817px;
 }
 
 .section,
@@ -62,6 +114,7 @@ html {
   flex-direction: column;
   background-color: #fff;
   width: 100%;
+  margin-top: 25%;
 }
 
 .details {
@@ -89,13 +142,6 @@ html {
 .icons li {
   flex: 1 1 10%;
   text-decoration: none;
-}
-
-.icons li a {
-  flex: 1;
-  padding: 1px 5px;
-  color: #505f79;
-  font-size: 22px;
 }
 
 .title {
@@ -252,7 +298,7 @@ html {
 }
 
 .myself {
-  height: 1200px;
+  height: 1400px;
   background: #fff;
   border-top-right-radius: 80px;
 }
@@ -320,11 +366,6 @@ html {
 
 .skill-title {
   width: 108%;
-}
-
-.fa-solid {
-  margin-left: 50%;
-  color: #acb7c3;
 }
 
 .bottom {
@@ -451,6 +492,14 @@ footer form {
 }
 
 @media (min-width: 768px) {
+  .nav-menu {
+    display: none;
+  }
+
+  .nav-bar {
+    margin-top: 0%;
+  }
+
   .nav-bar ul {
     display: flex;
     list-style-type: none;
@@ -468,13 +517,13 @@ footer form {
 
   .nav-bar .name {
     flex: 8;
+    font-weight: 700;
   }
 
   .nav-bar li a {
     color: #6070ff;
     text-decoration: none;
     justify-content: space-between;
-    flex: 1;
   }
 
   .dropDown {
@@ -492,6 +541,7 @@ footer form {
     align-items: center;
     border-bottom-left-radius: 80px;
     margin-bottom: -5%;
+    margin-top: 0;
   }
 
   .details {
