@@ -119,20 +119,24 @@ const errorEmail = document.querySelector('small');
 const form = document.querySelector('#form');
 
 const isRequired = (value) => { 
+  let valid;
   if (value === '') { 
-    return false } 
-  else {
-     return true; 
-  }
-}
+    valid = false;
+  } else { 
+    valid = true; 
+  } 
+  return valid;
+};
 
 const isBetween = (length, min, max) => { 
+  let valid;
   if (length < min || length > max) {
-     return false 
-    } else { 
-      return true; 
-    } 
-  }
+    valid = false;
+  } else { 
+    valid = true; 
+  } 
+  return valid;
+};
 
 const isEmailValid = (email) => {
   const re = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
@@ -148,17 +152,15 @@ const showError = (input, message) => {
 const checkEmail = () => {
   if (!(emailEl.value === emailEl.value.toLowerCase())) {
     showError(emailEl, 'Email Address should not have uppercase letters.');
-  } else if (!isRequired(email)) {
+  } else if (!isRequired(emailEl)) {
     showError(emailEl, 'Email cannot be blank.');
   } else if (!isEmailValid(emailEl.value)) {
     showError(emailEl, 'Invalid Email Address');
   } else if (!isBetween(emailEl.length, 3, 50)) {
     showError(emailEl, 'Email cannot be blank.');
   }
-
   return true;
-
-}
+};
 
 const checkUsername = () => {
   if (!isBetween(usernameEl.length, 3, 30)) {
@@ -166,10 +168,8 @@ const checkUsername = () => {
   } else if (!isRequired(usernameEl)) {
     showError(usernameEl, 'Full name cannot be blank.');
   }
-
   return true;
-
-}
+};
 
 const checkMessage = () => {
   if (!isRequired(messageEl)) {
@@ -177,16 +177,14 @@ const checkMessage = () => {
   } else if (!isBetween(messageEl.length, 3, 400)) {
     showError(messageEl, 'Text area cannot be blank.');
   }
-
   return true;
+};
 
-}
-
-form.addEventListener('submit', function (e) {
+form.addEventListener('submit', (e) => {
   e.preventDefault();
-  const isUsernameValid = checkUsername(),
-    isEmailValid = checkEmail(),
-    isMessageValid = checkMessage();
+  const isUsernameValid = checkUsername();
+  const isEmailValid = checkEmail();
+  const isMessageValid = checkMessage();
 
   const isFormValid = isUsernameValid
     && isEmailValid
