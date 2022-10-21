@@ -117,23 +117,22 @@ const emailEl = document.querySelector('#email');
 const messageEl = document.querySelector('#message');
 const errorEmail = document.querySelector('small');
 const form = document.querySelector('#form');
+var valid; 
 
-const isRequired = (value) => { 
-  let valid;
-  if (value === '') { 
+const isRequired = (value) => {
+  if (value === '') {
     valid = false;
-  } else { 
-    valid = true; 
-  } 
+  } else {
+    valid = true;
+  }
   return valid;
 };
 
-const isBetween = (length, min, max) => { 
-  let valid;
+const isBetween = (length, min, max) => {
   if (length < min || length > max) {
     valid = false;
-  } else { 
-    valid = true; 
+  } else {
+    valid = true;
   } 
   return valid;
 };
