@@ -110,7 +110,7 @@ function myFunction() {
 }
 
 myFunction();
-//  openPopup(0);
+openPopup();
 
 const usernameEl = document.querySelector('#name');
 const emailEl = document.querySelector('#email');
@@ -121,15 +121,6 @@ let valid;
 
 const isRequired = (value) => {
   if (value === '') {
-    valid = false;
-  } else {
-    valid = true;
-  }
-  return valid;
-};
-
-const isBetween = (length, min, max) => {
-  if (length < min || length > max) {
     valid = false;
   } else {
     valid = true;
@@ -151,30 +142,16 @@ const showError = (input, message) => {
 const checkEmail = () => {
   if (emailEl.value != emailEl.value.toLowerCase()) {
     showError(emailEl, 'Email Address should not have uppercase letters.');
+    valid = false;
   } else if (!isRequired(emailEl)) {
     showError(emailEl, 'Email cannot be blank.');
+    valid = false;
   } else if (!isEmailValid(emailEl.value)) {
     showError(emailEl, 'Invalid Email Address');
+    valid = false;
   } else
-  return true;
-};
-
-const checkUsername = () => {
-  if (!isBetween(usernameEl.length, 3, 30)) {
-    showError(usernameEl, 'Email cannot be blank.');
-  } else if (!isRequired(usernameEl)) {
-    showError(usernameEl, 'Full name cannot be blank.');
-  } else
-  return true;
-};
-
-const checkMessage = () => {
-  if (!isRequired(messageEl)) {
-    showError(messageEl, 'Text area cannot be blank.');
-  } else if (!isBetween(messageEl.length, 3, 400)) {
-    showError(messageEl, 'Text area cannot be blank.');
-  } else
-  return true;
+  valid = true;
+  return valid;
 };
 
 form.addEventListener('submit', (e) => {
