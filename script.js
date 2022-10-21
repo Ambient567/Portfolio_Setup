@@ -110,7 +110,7 @@ function myFunction() {
 }
 
 myFunction();
-openPopup(0);
+//  openPopup(0);
 
 const usernameEl = document.querySelector('#name');
 const emailEl = document.querySelector('#email');
@@ -149,15 +149,13 @@ const showError = (input, message) => {
 };
 
 const checkEmail = () => {
-  if (!(emailEl.value === emailEl.value.toLowerCase())) {
+  if (emailEl.value != emailEl.value.toLowerCase()) {
     showError(emailEl, 'Email Address should not have uppercase letters.');
   } else if (!isRequired(emailEl)) {
     showError(emailEl, 'Email cannot be blank.');
   } else if (!isEmailValid(emailEl.value)) {
     showError(emailEl, 'Invalid Email Address');
-  } else if (!isBetween(emailEl.length, 3, 50)) {
-    showError(emailEl, 'Email cannot be blank.');
-  }
+  } else
   return true;
 };
 
@@ -166,7 +164,7 @@ const checkUsername = () => {
     showError(usernameEl, 'Email cannot be blank.');
   } else if (!isRequired(usernameEl)) {
     showError(usernameEl, 'Full name cannot be blank.');
-  }
+  } else
   return true;
 };
 
@@ -175,7 +173,7 @@ const checkMessage = () => {
     showError(messageEl, 'Text area cannot be blank.');
   } else if (!isBetween(messageEl.length, 3, 400)) {
     showError(messageEl, 'Text area cannot be blank.');
-  }
+  } else
   return true;
 };
 
@@ -193,5 +191,6 @@ form.addEventListener('submit', (e) => {
   if (isFormValid) {
     errorEmail.textContent = '';
     form.submit();
+    form.reset();
   }
 });
