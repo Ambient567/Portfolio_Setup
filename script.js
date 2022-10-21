@@ -110,3 +110,4 @@ function myFunction() {
 }
 
 myFunction();
+openPopup(0);
