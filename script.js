@@ -49,7 +49,7 @@ const works = [
   },
 ];
 
-function open_popup(value) {
+function openPopup(value) {
   const container = document.getElementById('popContainer');
   container.innerHTML = `
   <div class="container-section">
@@ -86,8 +86,8 @@ function open_popup(value) {
 
   container.style.display = 'block';
 
-  const popup_Close = document.querySelector('.close-container-button');
-  popup_Close.addEventListener('click', () => {
+  const popupClose = document.querySelector('.close-container-button');
+  popupClose.addEventListener('click', () => {
     const container = document.querySelector('.popContainer');
     container.style.display = 'none';
   });
@@ -95,10 +95,10 @@ function open_popup(value) {
 
 const modal = document.getElementById('popContainer');
 window.onclick = function (event) {
-  if (event.target == modal) {
+  if (event.target === modal) {
     modal.style.display = 'none';
   }
-}
+};
 
 function myFunction() {
   const element = document.querySelector('#myLinks');
