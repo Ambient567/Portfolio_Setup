@@ -111,3 +111,81 @@ function myFunction() {
 
 myFunction();
 openPopup(0);
+
+const usernameEl = document.querySelector('#name');
+const emailEl = document.querySelector('#email');
+const messageEl = document.querySelector('#message');
+const errorEmail = document.querySelector('small');
+const form = document.querySelector('#form');
+
+const isRequired = value => value === '' ? false : true;
+const isBetween = (length, min, max) => length < min || length > max ? false : true;
+const isEmailValid = (email) => {
+  const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+  return re.test(email);
+};
+
+const showError = (input, message) => {
+  const formField = input.parentElement;
+  const error = formField.querySelector('small');
+  error.textContent = message;
+};
+
+const checkEmail = () => {
+  if (!(emailEl.value === emailEl.value.toLowerCase())) {
+    showError(emailEl,'Email Address should not have uppercase letters.');
+  }
+  else if (!isRequired(email)) {
+    showError(emailEl, 'Email cannot be blank.');
+  }
+  else if (!isEmailValid(emailEl.value)) {
+    showError(emailEl, 'Invalid Email Address');
+  }
+  else if (!isBetween(emailEl.length,3,50)) {
+    showError(emailEl, 'Email cannot be blank.');
+  }
+  else {
+    return true;
+  }
+}
+
+const checkUsername = () => {
+  if (!isBetween(usernameEl.length,3,30)) {
+    showError(usernameEl, 'Email cannot be blank.');
+  }
+  else if (!isRequired(usernameEl)) {
+    showError(usernameEl, 'Full name cannot be blank.');
+  }
+  else{
+    return true;
+  }
+}
+
+const checkMessage = () => {
+  if (!isRequired(messageEl)) {
+    showError(messageEl, 'Text area cannot be blank.');
+  }
+  else if (!isBetween(messageEl.length,3,400)) {
+    showError(messageEl, 'Text area cannot be blank.');
+  }
+  else{
+    return true;
+  }
+}
+
+form.addEventListener('submit', function (e) {
+  e.preventDefault();
+  let isUsernameValid = checkUsername(),
+  isEmailValid = checkEmail(),
+  isMessageValid = checkMessage();
+
+  let isFormValid = isUsernameValid &&
+  isEmailValid &&
+  isMessageValid;
+
+// submit to the server if the form is valid
+  if (isFormValid) {
+    errorEmailtextContent = '';
+    form.submit();
+  }
+});
