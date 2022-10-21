@@ -49,9 +49,6 @@ const works = [
   },
 ];
 
-
-
-
 function open_popup(value) {
   const container = document.getElementById('popContainer');
   container.innerHTML = `
@@ -96,14 +93,12 @@ function open_popup(value) {
   });
 }
 
-var modal = document.getElementById('popContainer');
+const modal = document.getElementById('popContainer');
 window.onclick = function (event) {
   if (event.target == modal) {
     modal.style.display = 'none';
   }
 }
-
-//-------------------------------------------------------Mobile menu-------------------------------------
 
 function myFunction() {
   const element = document.querySelector('#myLinks');

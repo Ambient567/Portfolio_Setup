@@ -548,9 +548,6 @@ footer form {
   display: flex;
   list-style-type: none;
   gap: 10px;
-}
-
-.developer {
   font-style: normal;
   font-weight: 600;
   font-size: 13px;
