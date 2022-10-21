@@ -117,7 +117,7 @@ const emailEl = document.querySelector('#email');
 const messageEl = document.querySelector('#message');
 const errorEmail = document.querySelector('small');
 const form = document.querySelector('#form');
-var valid; 
+let valid;
 
 const isRequired = (value) => {
   if (value === '') {
@@ -133,7 +133,7 @@ const isBetween = (length, min, max) => {
     valid = false;
   } else {
     valid = true;
-  } 
+  }
   return valid;
 };
 
