@@ -112,9 +112,7 @@ function myFunction() {
 myFunction();
 openPopup();
 
-const usernameEl = document.querySelector('#name');
 const emailEl = document.querySelector('#email');
-const messageEl = document.querySelector('#message');
 const errorEmail = document.querySelector('small');
 const form = document.querySelector('#form');
 let valid;
@@ -140,7 +138,7 @@ const showError = (input, message) => {
 };
 
 const checkEmail = () => {
-  if (emailEl.value != emailEl.value.toLowerCase()) {
+  if (emailEl.value !== emailEl.value.toLowerCase()) {
     showError(emailEl, 'Email Address should not have uppercase letters.');
     valid = false;
   } else if (!isRequired(emailEl)) {
@@ -149,20 +147,17 @@ const checkEmail = () => {
   } else if (!isEmailValid(emailEl.value)) {
     showError(emailEl, 'Invalid Email Address');
     valid = false;
-  } else
-  valid = true;
+  } else {
+    valid = true;
+  }
   return valid;
 };
 
 form.addEventListener('submit', (e) => {
   e.preventDefault();
-  const isUsernameValid = checkUsername();
   const isEmailValid = checkEmail();
-  const isMessageValid = checkMessage();
 
-  const isFormValid = isUsernameValid
-    && isEmailValid
-    && isMessageValid;
+  const isFormValid = isEmailValid
 
   // submit to the server if the form is valid
   if (isFormValid) {
