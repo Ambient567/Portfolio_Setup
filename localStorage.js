@@ -27,5 +27,5 @@ Object.keys(parseData || {}).forEach((key) => {
 });
 
 formStorage.addEventListener('change', () => {
- toStorage(nameStorage, emailStorage, messageStorage);
+  toStorage(nameStorage, emailStorage, messageStorage);
 });
