@@ -83,7 +83,7 @@ form.addEventListener('submit', (e) => {
   const isFormValid = isUsernameValid
     && emailValid
     && isMessageValid;
-    
+
   // submit to the server if the form is valid
   if (isFormValid) {
     errorEmail.textContent = '';
