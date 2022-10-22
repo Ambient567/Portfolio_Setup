@@ -2,7 +2,7 @@ const usernameEl = document.querySelector('#name');
 const emailEl = document.querySelector('#email');
 const messageEl = document.querySelector('#message');
 const errorEmail = document.querySelector('small');
-
+let valid;
 const form = document.querySelector('#form');
 
 const isRequired = (value) => {
@@ -13,7 +13,7 @@ const isRequired = (value) => {
   }
   return valid;
 };
-  
+
 const isBetween = (length, min, max) => {
   if (length < min || length > max) {
     valid = false;
@@ -41,8 +41,7 @@ const checkEmail = () => {
     errorEmail.textContent = '';
     if (!isEmailValid(emailEl.value)) {
       showError(emailEl, 'Invalid Email Address');
-    }
-    else {
+    } else {
       valid = true;
     }
   } else {
@@ -72,21 +71,20 @@ const checkMessage = () => {
   } else {
     valid = true;
   }
-    return valid;
+  return valid;
 };
 
-
-form.addEventListener('submit', function (e) { 
+form.addEventListener('submit', (e) => {
   e.preventDefault();
   const isUsernameValid = checkUsername();
   const emailValid = checkEmail();
   const isMessageValid = checkMessage();
 
-  const isFormValid = isUsernameValid 
-    && emailValid 
+  const isFormValid = isUsernameValid
+    && emailValid
     && isMessageValid;
-        
-// submit to the server if the form is valid
+    
+  // submit to the server if the form is valid
   if (isFormValid) {
     errorEmail.textContent = '';
     form.submit();
