@@ -110,4 +110,4 @@ function myFunction() {
 }
 
 myFunction();
-openPopup(0);
+openPopup();
